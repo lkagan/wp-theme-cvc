@@ -23,16 +23,16 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			if ( is_front_page() || is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-horizontal.png"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-horizontal.png"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a></p>
 			<?php
 			endif;
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->

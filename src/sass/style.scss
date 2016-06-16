@@ -7,6 +7,7 @@ Text Domain: superiocity
 
 $card-shadow: 1px 1px 4px 1px rgba(0,0,0,.2);
 $font-content: 'Helvetica Neue', verdana, sans-serif;
+$font-serif: 'Century Regular', 'Times New Roman', serif;
 
 
 html {
@@ -14,6 +15,7 @@ html {
 }
 
 body {
+  background-color: #000;
   font-family: $font-content;
   position: relative;
   margin: 0;
@@ -36,12 +38,9 @@ li {
   min-height: 100vh;
   height: 100vh;
 
-  .site-header {
-    flex: 0 0 auto;
-  }
-
   .site-content {
     flex: 1 0 auto;
+    background-color: #fff;
   }
 }
 
@@ -56,6 +55,8 @@ img {
 }
 
 .site-header {
+  flex: 0 0 auto;
+  text-align: center;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -66,7 +67,7 @@ img {
   left: 0;
   right: 0;
   padding: .5em;
-  background-color: rgba(#000,.9);
+  background-color: rgba(#000,.8);
   color: #eee;
   box-shadow: rgba(0,0,0,.5) 4px 0 4px;
   border-bottom: solid 1px #999;
@@ -74,10 +75,10 @@ img {
 
 .site-branding {
   white-space: nowrap;
+}
 
-  .logo {
-    margin: .25em 0 0 .25em;
-  }
+.site-title {
+  margin: 0 0 -8px 0;
 }
 
 .home {
@@ -87,15 +88,23 @@ img {
   }
 }
 
+.main-navigation {
+  flex: 1 0 auto;
+}
+
+/* Special menu item to use as logo on larger screens.  Not needed on small screens */
+#menu-item-51 {
+  display: none;
+}
+
 .menu-open {
-  padding: .25em;
-  text-align: center;
   font-size: 1.5rem;
   -webkit-appearance: none;
   border: none;
   background-color: transparent;
-  margin-right: .5em;
-  color: #eee;
+  color: #ccc;
+  padding: .25em 0 .25em .5em;
+  margin: 0;
 }
 
 .main-navigation {
@@ -110,14 +119,15 @@ img {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333;
+  background-color: rgba(0,0,0, .8);
+  border-left: 1px solid #444;
   color: #eee;
   height: 100%;
   box-shadow: rgba(0,0,0, .5) -5px 0 10px;
   transform: translateX(110%);
   transition: transform .3s;
   min-height: 100vh;
-  text-align: right;
+  text-align: center;
   overflow: auto;
 
   &.open {
@@ -172,6 +182,7 @@ img {
   overflow: hidden;
   max-width: 1680px;
   margin: 0 auto;
+  background-image: radial-gradient(circle 300px at 50% 50%, #460f38, #000);
 }
 
 .alignright {
@@ -254,9 +265,30 @@ img {
     display: none;
   }
 
+  .menu-item {
+    font-family: $font-serif;
+  }
+
+  .site-branding {
+    display: none;
+  }
+
+  /* Special menu item to use as logo on larger screens.  Not needed on small screens */
+  #menu-item-51 {
+    display: inline-block;
+  }
+
+  .main-nav-wrapper {
+    border-left: none;
+  }
+
   .main-navigation {
     font-size: 1em;
     text-align: right;
+
+    li {
+      margin-bottom: 0;
+    }
   }
 
   .menu-item-has-children>a:after, .page_item_has_children>a:after {
