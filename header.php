@@ -52,3 +52,10 @@
 				</section>
 			</div><!-- .hero-container -->
 		</div><!-- .hero-conteiner-wrapper -->
+		<div class="cta">
+			<div class="content">
+				<div class="copy">Save money and reduce stress by partnering with the leader in nationwide turnkey hospitality renovations.</div>
+				<div class="phone .button"><i class="fa fa-phone"></i> 1 (800) 000-0000</div>
+			</div>
+		</div>
+		<a href="/"><img src="<?php echo get_template_directory_uri() ?>/images/logo.gif" alt="CVC Hospitality Logo"class="logo"></a>
