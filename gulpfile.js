@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     sassPath = './src/sass',
     jsPath = './src/js',
-    imgPath = './src/images';
+    imgPath = 'src/images';
 
 
 /*

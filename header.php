@@ -41,6 +41,12 @@
 			<button class="menu-open" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
 			<div class="main-nav-wrapper">
 				<a href="#" class="menu-close"><i class="fa fa-close"></i> close</a>
+				<a href="/"><img src="<?php echo get_template_directory_uri() ?>/images/logo-180.gif"
+				                 srcset="<?php echo get_template_directory_uri() ?>/images/logo-150.gif 150w,
+				                 <?php echo get_template_directory_uri() ?>/images/logo-180.gif 180w,
+								<?php echo get_template_directory_uri() ?>/images/logo-200.gif 200w"
+				                 sizes="(max-width: 1399px) 150px, (max-width: 1799px) 180px, 200px"
+				                 alt="CVC Hospitality Logo"class="logo"></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div><!-- .main-nav-wrapper -->
 		</nav><!-- #site-navigation -->
@@ -58,4 +64,3 @@
 				<div class="phone .button"><i class="fa fa-phone"></i> 1 (800) 000-0000</div>
 			</div>
 		</div>
-		<a href="/"><img src="<?php echo get_template_directory_uri() ?>/images/logo.gif" alt="CVC Hospitality Logo"class="logo"></a>
