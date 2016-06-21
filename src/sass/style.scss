@@ -69,10 +69,10 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  padding: .5em;
+  padding: 0 .5em;
   background-color: rgba(#000,.8);
   color: #ddd;
-  box-shadow: rgba(0,0,0,.5) 4px 0 4px;
+  box-shadow: $high-shadow;
   border-bottom: solid 1px #999;
 }
 
@@ -85,7 +85,21 @@ img {
 }
 
 .logo {
-  display: none;
+  display: inline-block;
+  z-index: 150;
+  position: fixed;
+  top: 7px;
+  left: 10px;
+  width: 100px;
+  box-shadow: $high-shadow;
+}
+
+.site-header .phone {
+  position: absolute;
+  right: 4em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .85em;
 }
 
 .home {
@@ -141,6 +155,7 @@ img {
   min-height: 100vh;
   text-align: center;
   overflow: auto;
+  z-index: 300;
 
   &.open {
     transform: translateX(0);
@@ -270,7 +285,7 @@ img {
   }
 
   .phone {
-    display: inline-block;
+    display: none;
     color: $color2;
     border: solid 2px $color2;
     padding: .5em;
@@ -336,6 +351,11 @@ img {
 
   .site-header {
     box-shadow: $high-shadow;
+    padding: .5em;
+  }
+
+  .site-header .phone {
+    display: none;
   }
 
   .logo {
