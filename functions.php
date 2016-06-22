@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  */
 
+
 if ( ! function_exists( 'superiocity_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
