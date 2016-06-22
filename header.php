@@ -12,6 +12,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
@@ -36,14 +37,26 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-		<span class="phone"><i class="fa fa-phone"></i> (800) 000-0000</span>
+		<div class="phone">
+			<a href="tel:+1-800-000-0000"><i class="fa fa-phone"></i> 1-800-000-0000</a>
+			<div class="tip"><i class="fa fa-hand-pointer-o"></i> tap to call</div>
+		</div>
 
-		<a href="/"><img src="<?php echo get_template_directory_uri() ?>/images/logo-180.gif"
-		                 srcset="<?php echo get_template_directory_uri() ?>/images/logo-150.gif 150w,
-				                 <?php echo get_template_directory_uri() ?>/images/logo-180.gif 180w,
-								<?php echo get_template_directory_uri() ?>/images/logo-200.gif 200w"
-		                 sizes="(max-width: 1399px) 150px, (max-width: 1799px) 180px, 200px"
-		                 alt="CVC Hospitality Logo"class="logo"></a>
+		<div class="logo-container">
+			<a href="/">
+				<div class="logo-container-inner">
+					<img src="<?php echo get_template_directory_uri() ?>/images/logo-160.png"
+								 srcset="<?php echo get_template_directory_uri() ?>/images/logo-75.png 75w,
+										 <?php echo get_template_directory_uri() ?>/images/logo-110.png 110w,
+										 <?php echo get_template_directory_uri() ?>/images/logo-150.png 150w,
+										<?php echo get_template_directory_uri() ?>/images/logo-175.png 175w"
+								 sizes="(max-width: 499px) 75px, (max-width: 1399px) 110px, 175px"
+								 alt="CVC Hospitality Logo"class="logo">
+					<div class="logo-sub">Hospitality, Inc.</div>
+					<div class="logo-phone"><i class="fa fa-phone"></i> 1-800-000-0000</div>
+				</div><!-- .logo-container-inner -->
+			</a>
+		</div><!-- .logo-container -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-open" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
 			<div class="main-nav-wrapper">
@@ -62,6 +75,6 @@
 		<div class="cta">
 			<div class="content">
 				<div class="copy">Save money and reduce stress by partnering with the leader in nationwide turnkey hospitality renovations.</div>
-				<div class="phone .button"><i class="fa fa-phone"></i> 1 (800) 000-0000</div>
+				<div class="phone"><a href="tel:+1-800-000-0000"><i class="fa fa-phone"></i> (800) 000-0000</a></div>
 			</div>
 		</div>

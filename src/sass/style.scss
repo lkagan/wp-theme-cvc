@@ -24,6 +24,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  color: #000;
+}
+
+a[href^="tel:"] {
+  color: #000;
+  text-decoration: none;
 }
 
 p, li {
@@ -84,14 +90,42 @@ img {
   margin: 0 0 -8px 0;
 }
 
-.logo {
+.logo-container {
   display: inline-block;
   z-index: 150;
   position: fixed;
   top: 7px;
-  left: 10px;
-  width: 100px;
+  left: 7px;
   box-shadow: $high-shadow;
+  background-color: #fff;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo-container-inner {
+  border: solid .1em #000;
+  padding: .25em;
+  margin: .2em;
+}
+
+.logo {
+  width: 75px;
+}
+
+.logo-sub {
+  font-family: $font-serif;
+  color: #000;
+  text-align: center;
+  font-size: 9px;
+  text-transform: uppercase;
+  margin-top: -2px;
+  font-weight: bold;
+}
+
+.logo-phone {
+  display: none;
 }
 
 .site-header .phone {
@@ -100,7 +134,16 @@ img {
   top: 50%;
   transform: translateY(-50%);
   font-size: .85em;
+
+  a[href^="tel:"] {
+    color: #ccc;
+  }
+
+  .tip {
+    font-size: .7em;
+  }
 }
+
 
 .home {
   h3 {
@@ -275,60 +318,75 @@ img {
 }
 
 .cta {
-  position: absolute;
-  transform: translateY(-150%) translateX(-50%);
+  background: #fff;
+  position: relative;
+  box-shadow: $card-shadow;
+  transform: translate(-50%, -10%);
   left: 50%;
-  box-shadow: $high-shadow;
+  max-width: 80%;
+  text-align: center;
+  padding: 5px;
+  font-size: .85em;
+
+  .content {
+    border: solid 2px black;
+    padding: 1em;
+  }
 
   .copy {
-    display: none;
+    display: block;
   }
 
   .phone {
-    display: none;
-    color: $color2;
-    border: solid 2px $color2;
-    padding: .5em;
-    white-space: nowrap;
+    margin-top: 1em;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 500px) {
 
+  .logo-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .logo-sub {
+    font-size: 12px;
+  }
+
+  .site-header {
+    text-align: left;
+  }
+
+  .site-header .phone {
+    font-size: 1em;
+    left: 7px;
+  }
+
+  .phone .tip {
+    display: none;
+  }
+
   .home .hero {
     height: 600px;
+  }
+
+  .cta {
+    transform: translate(-50%, -30%);
+    font-size: 1em;
   }
 
   .site-footer {
     .sep, span {
       display: inline;
       margin: 0 .25em;
-    }
-  }
-
-  .cta {
-    background: #fff;
-    position: relative;
-    transform: translateY(-30%) translateX(-50%);
-    max-width: 80%;
-    text-align: center;
-    padding: 5px;
-
-    .content {
-      border: solid 2px black;
-      padding: 1rem;
-    }
-
-    .copy {
-      display: block;
-    }
-
-    .phone {
-      margin-top: 1rem;
-      color: #000;
-      border: none;
-      font-size: 1.5em;
-      padding: 0;
     }
   }
 }
@@ -358,15 +416,12 @@ img {
     display: none;
   }
 
-  .logo {
-    display: inline-block;
-    z-index: 150;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    width: 150px;
-    transform: translateX(-48%);
-    box-shadow: $high-shadow;
+  .logo-phone {
+    display: block;
+    color: #999;
+    font-size: 9px;
+    letter-spacing: .1em;
+    text-align: center;
   }
 
   /* Special menu item to use as logo on larger screens.  Not needed on small screens */
@@ -481,7 +536,15 @@ img {
   }
 
   .logo {
-    width: 180px;
+    width: 150px;
+  }
+
+  .logo-sub {
+    font-size: 16px;
+  }
+
+  .logo-phone {
+    font-size: 12px;
   }
 
   #menu-item-51 {
