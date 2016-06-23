@@ -9,7 +9,7 @@ $card-shadow: 1px 1px 4px 1px rgba(0,0,0,.2);
 $high-shadow: 0px 0px 10px 8px rgba(0,0,0,.3);
 $font-content: 'Helvetica Neue', verdana, sans-serif;
 $font-serif: 'Century Regular', 'Times New Roman', serif;
-$color1: #402737;
+$color1: #543449;
 $color2: #999;
 
 
@@ -237,15 +237,19 @@ img {
 }
 
 .home .hero {
+  text-align: center;
+  filter: drop-shadow(0 0 10px #000);
   background-size: cover;
-  height: 350px;
-  margin: 0 auto;
-  max-height: 800px;
+  margin: 2.75em 0;
+  height: 200px;
+  background: url(images/header-hex-685.png) no-repeat center center;
+  background-size: contain;
+
 }
 
 .hero-container-wrapper {
-  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .7));
-  background-color: $color1;
+  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
+  background-color: lighten($color1, 10%);
 }
 
 .hero-container {
@@ -375,7 +379,9 @@ img {
   }
 
   .home .hero {
-    height: 600px;
+    margin: 4.5em 1em;
+    padding: 0;
+    height: 450px;
   }
 
   .cta {
@@ -544,6 +550,10 @@ img {
     border-radius: .25em;
     z-index: 200;
     padding: .5em;
+  }
+
+  .home .hero {
+    background-image: url(images/header-hex-1150.png);
   }
 }
 
