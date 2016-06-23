@@ -483,6 +483,7 @@ img {
     ul li {
       border-bottom: none;
       display: inline-block;
+      margin: 0 .25em;
 
 
       &:last-child {
@@ -591,7 +592,14 @@ img {
   }
 
   #menu-item-51 {
-    width: 245px;
+    width: 295px;
   }
 }
 
+
+@media screen and (min-width: 2000px) {
+  .home .hero {
+    background-image: url(images/header-hex-2000.png);
+    height: 600px;
+  }
+}
