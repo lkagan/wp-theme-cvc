@@ -74,7 +74,7 @@
 		</div><!-- .hero-conteiner-wrapper -->
 		<div class="cta">
 			<div class="content">
-				<div class="copy">Save money and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
+				<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
 				<div class="phone"><a href="tel:+1-800-000-0000"><i class="fa fa-phone"></i> (800) 000-0000</a></div>
 			</div>
 		</div>
