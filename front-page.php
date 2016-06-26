@@ -27,19 +27,21 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 			
-		<section class="container-full intro">
-			<div class="description">
-				Lower bids & less stress are what you can expect from a nationwide turnkey provider of interior / exterior construction, renovation and design.  From chain hotels to premium resorts, our award-winning team surpasses expectations on projects ranging from small redesigns to sustainable construction and renovation.
-			</div>
-			<div class="servicing">
-				<h4>Servicing</h4>
-				<ul>
-					<li>Boutique Resorts</li>
-					<li>Timeshares</li>
-					<li>Premium Resorts</li>
-					<li>Chain hotels</li>
-				</ul>
-			</div>
+		<section class="container-full intro fixed-bg">
+			<div class="overlay">
+				<div class="description">
+					Lower bids & less stress are what you can expect from a nationwide turnkey provider of interior / exterior construction, renovation and design.  From chain hotels to premium resorts, our award-winning team surpasses expectations on projects ranging from small redesigns to sustainable construction and renovation.
+				</div><!-- .description -->
+				<div class="servicing">
+					<h4>Servicing</h4>
+					<ul>
+						<li>Boutique Resorts</li>
+						<li>Timeshares</li>
+						<li>Premium Resorts</li>
+						<li>Chain hotels</li>
+					</ul>
+				</div><!-- .servicing -->
+			</div><!-- .overlay -->
 		</section>
 
 		<section class="container-full brands">
@@ -55,17 +57,21 @@ get_header(); ?>
 				<img src="http://placehold.it/150x75">
 				<img src="http://placehold.it/150x75">
 				<img src="http://placehold.it/150x75">
-			</div>
-		</section>
+			</div><!-- .logos -->
+		</section><!-- .brands -->
 
-		<section class="container-full services">
-			<h3>Services</h3>
-			<div class="construction">Construction</div>
-			<div class="design">Design</div>
-			<div class="ffe-purchasing">FF&amp;E Purchasing</div>
-			<div class="arch-interiors">Architectual Interiors</div>
-			<div class="renovation">Renovation</div>
-		</section>
+		<section class="container-full services fixed-bg">
+			<div class="overlay">
+				<h3>Services</h3>
+				<div class="links">
+					<a href="/services/construction/"><div><span>Construction</span></div></a>
+					<a href="/services/design-interior-exterior/"><div><span>Design</span></div></a>
+					<a href="/purchasing-procurement-ffe-services/"><div><span>FF&amp;E Purchasing</span></div></a>
+					<a href="/services/architecture/"><div><span>Architectual Interiors</span></div></a>
+					<a href="/renovation-remodeling-services/"><div><span>Renovation</span></div></a>
+				</div>
+			</div><!-- .overlay -->
+		</section><!-- .services -->
 		
 		<section class="container-full awards">
 			<h3>An Award Winning Team On Your Side</h3>
