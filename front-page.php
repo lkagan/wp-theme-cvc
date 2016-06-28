@@ -29,18 +29,20 @@ get_header(); ?>
 			
 		<section class="container-full intro fixed-bg">
 			<div class="overlay">
-				<div class="description">
-					Lower bids & less stress are what you can expect from a nationwide turnkey provider of interior / exterior construction, renovation and design.  From chain hotels to premium resorts, our award-winning team surpasses expectations on projects ranging from small redesigns to sustainable construction and renovation.
-				</div><!-- .description -->
-				<div class="servicing">
-					<h4>Servicing</h4>
-					<ul>
-						<li>Boutique Resorts</li>
-						<li>Timeshares</li>
-						<li>Premium Resorts</li>
-						<li>Chain hotels</li>
-					</ul>
-				</div><!-- .servicing -->
+				<div class="wrapper">
+					<div class="servicing">
+						<h4>Servicing</h4>
+						<ul class="hex-bullets">
+							<li class="hex-bullet">Boutique Resorts</li>
+							<li class="hex-bullet">Timeshares</li>
+							<li class="hex-bullet">Premium Resorts</li>
+							<li class="hex-bullet">Chain hotels</li>
+						</ul>
+					</div><!-- .servicing -->
+					<div class="description">
+						Lower bids & less stress are what you can expect from a nationwide turnkey provider of interior / exterior construction, renovation and design.  From chain hotels to premium resorts, our award-winning team surpasses expectations on projects ranging from small redesigns to sustainable construction and renovation.
+					</div><!-- .description -->
+				</div><!-- .wrapper -->
 			</div><!-- .overlay -->
 		</section>
 
@@ -82,8 +84,10 @@ get_header(); ?>
 		</section>
 			
 		<section class="container-full testimonials">
-			"I am extremely pleased with their work, abilities, and talents "<br>
-			- Justin Smith: Prestige Hotels
+			<div class="wrapper">
+				"I am extremely pleased with their work, abilities, and talents "<br>
+				- Justin Smith: Prestige Hotels
+			</div>
 		</section>
 
 		</main><!-- #main -->
