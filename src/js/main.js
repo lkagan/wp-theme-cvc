@@ -3,6 +3,24 @@
 
     window.addEventListener('DOMContentLoaded', function () {
 
+        // iOS-specific functionality.
+        (function() {
+            // Get a flag telling us if this is an iOS device.
+            var iOS = /iPad|iPhone|iPod|CriOS/.test(navigator.userAgent) && !window.MSStream;
+
+            // Change fixed background to scroll.
+            if (iOS) {
+                var fixedBgElements = document.getElementsByClassName('fixed-bg');
+
+                if (fixedBgElements != undefined) {
+                    for (var i = 0; i < fixedBgElements.length; ++i) {
+                        fixedBgElements[i].style.backgroundAttachment = 'scroll';
+                    }
+                }
+            }
+        })();
+
+
         // Small screen menu open
         document.getElementsByClassName('menu-open')[0]
             .addEventListener('click', function(e) {

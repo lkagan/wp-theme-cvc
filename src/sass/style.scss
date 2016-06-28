@@ -10,6 +10,7 @@ $high-shadow: 0px 0px 10px 8px rgba(0,0,0,.3);
 $font-content: 'Helvetica Neue', verdana, sans-serif;
 $font-serif: 'Century Regular', 'Times New Roman', serif;
 $color1: #543449;
+$color1: #cccccc;
 $color2: #999;
 
 
@@ -39,6 +40,32 @@ p, li {
 
 li {
   margin-bottom: .5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 1em;
+}
+
+.hex-bullets {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 1.25em;
+    background: url(images/hex-bullet-999.png)  no-repeat 0 .17em;
+    background-size: .75em;
+  }
+}
+
+h3 {
+  padding-left: 1em;
+  background: url(images/hex-header-999.png)  no-repeat 0 .15em;
+  background-size: .85em;
 }
 
 #page {
@@ -144,11 +171,11 @@ img {
   }
 }
 
-
 .home {
   h3 {
     font-size: 1.75rem;
     font-weight: normal;
+    font-variant: small-caps;
   }
 }
 
@@ -240,7 +267,7 @@ img {
   text-align: center;
   filter: drop-shadow(0 0 10px #000);
   background-size: cover;
-  margin: 2.75em 0;
+  margin: 3.75em 0;
   height: 200px;
   background: url(images/header-hex-685.png) no-repeat center center;
   background-size: contain;
@@ -248,40 +275,117 @@ img {
 }
 
 .hero-container-wrapper {
-  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
-  background-color: lighten($color1, 10%);
   border-bottom: solid 1px #999;
+  background: url(images/brushed-metal.jpg) repeat;
 }
 
 .hero-container {
   position: relative;
+  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
   overflow: hidden;
-  max-width: 1680px;
-  margin: 0 auto;
 }
 
 .home .testimonials {
-  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
-  background-color: lighten($color1, 10%);
-  color: #ccc;
-  padding: 3em 2em;
-  margin: 0 auto;
+  background: #ccc url(images/brushed-metal.jpg) repeat;
+  padding: 0;
+
+  .wrapper {
+    padding: 2em;
+    background: transparent radial-gradient(ellipse at 50% 50%, transparent ,rgba(0,0,0,.7)) no-repeat;
+    color: #000;
+    font-size: 1.2em;
+    text-shadow: 1px 1px rgba(255,255,255, .7);
+    text-align: center;
+  }
 }
 
-
 .container-full {
-  padding: 2em;
+  padding: 5em 2em;
 }
 
 .home .intro, .home .services{
-  background: #333;
-  background-size: cover;
-  color: #ccc;
+  color: #bbb;
+  text-shadow: 1px 1px 10px #000;
+  letter-spacing: .05em;
+  line-height: 1.5em;
 }
 
 .home .intro {
-  padding: 10em 2em 2em 2em;
+  padding: 0;
+  background: #333 url(images/outside-night.jpg) no-repeat fixed center center;
+  background-size: cover;
+
+  .wrapper{
+    background-color: rgba(0,0,0, .8);
+    padding: 10em 1em 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
+
+.home .description {
+  margin-top: 2em;
+}
+
+.home .services {
+  background: #333 url(images/inn-on-5th.jpg) no-repeat fixed center center;
+  background-size: cover;
+  padding: 0;
+
+  .overlay {
+    padding: 5em 2em;
+    background: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.3) 25%,  transparent, rgba(0,0,0, .3) 75%, rgba(0,0,0, .7));
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  a {
+    box-shadow: 0 0 10px 8px rgba(0,0,0, .1);
+    display: block;
+    list-style: none;
+    background-color: rgba(226, 117, 16, 1);
+    transition: all .2s;
+    position: relative;
+    margin: .5em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px .1em rgba(0,0,0, .5);
+    letter-spacing: .1em;
+    font-weight: bold;
+    font-size: .75em;
+    line-height: 1.5em;
+
+    div {
+      margin: .75em;
+      width: 170px;
+      height: 55px;
+      font-size: 1em;
+      color: #fff;
+      border: solid 1px #ddd;
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  a:hover {
+    box-shadow: 0 0 20px 8px rgba(0,0,0,.1);
+    background-color: rgba(226, 117, 16, 1);
+    transform: scale(1.1);
+  }
+}
+
 
 .alignright {
   float: right; margin: 0 0 1em;
@@ -423,7 +527,7 @@ img {
   }
 
   .home .hero {
-    margin: 4.5em 1em;
+    margin: 6.5em 1em;
     padding: 0;
     height: 450px;
   }
@@ -431,6 +535,16 @@ img {
   .cta {
     transform: translate(-50%, -30%);
     font-size: 1em;
+  }
+
+  .home .intro .overlay {
+    padding: 10em 1em 5em 1em;
+    background: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.3) 25%,  transparent, rgba(0,0,0, .3) 75%, rgba(0,0,0, .7));
+  }
+
+  .home .intro .wrapper {
+    border: solid 1px #999;
+    padding: 2em;
   }
 
   .site-footer {
@@ -600,6 +714,39 @@ img {
 
   .home .hero {
     background-image: url(images/header-hex-1150.png);
+  }
+
+  .home .services a {
+    background-color: rgba(226, 117, 16, 0.9);
+    font-size: 1em;
+
+    div {
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  .home .intro .overlay {
+    padding: 0;
+    background: none;
+  }
+
+  .home .intro .wrapper {
+    background: transparent linear-gradient(to right, rgba(0,0,0, .7), rgba(0,0,0,.7) 80%, transparent);
+    flex-wrap: wrap;
+    border: none;
+    width: 50%;
+    margin: 0 ;
+    padding: 12em 10em 8em 2em;
+  }
+
+  .home .servicing {
+    white-space: nowrap;
+  }
+
+  .home .description {
+    max-width: 65%;
+    margin-top: 0;
   }
 }
 
