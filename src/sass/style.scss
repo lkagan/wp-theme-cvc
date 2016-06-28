@@ -539,7 +539,7 @@ img {
 
   .home .intro .overlay {
     padding: 10em 1em 5em 1em;
-    background: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.3) 25%,  transparent, rgba(0,0,0, .3) 75%, rgba(0,0,0, .7));
+    background: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.3) 25%,  transparent, rgba(0,0,0, .3) 75%, rgba(0,0,0, .5));
   }
 
   .home .intro .wrapper {
@@ -728,25 +728,21 @@ img {
 
   .home .intro .overlay {
     padding: 0;
-    background: none;
   }
 
   .home .intro .wrapper {
-    background: transparent linear-gradient(to right, rgba(0,0,0, .7), rgba(0,0,0,.7) 80%, transparent);
+    background-color: rgba(0,0,0, .7);
+    border-top-right-radius: 75%;
     flex-wrap: wrap;
     border: none;
     width: 50%;
     margin: 0 ;
-    padding: 12em 10em 8em 2em;
+    padding: 12em 5em 8em 2em;
+    justify-content: flex-start;
   }
 
   .home .servicing {
     white-space: nowrap;
-  }
-
-  .home .description {
-    max-width: 65%;
-    margin-top: 0;
   }
 }
 
