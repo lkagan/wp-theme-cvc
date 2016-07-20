@@ -44,14 +44,29 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  line-height: 1.2em;
 }
 
 h3 {
   margin-bottom: 1em;
 }
 
+.button {
+  border: solid 1px #ccc;
+  color: #ccc;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 .hex-bullets {
   padding: 0;
+  margin-left: 1em;
 
   li {
     list-style-type: none;
@@ -73,6 +88,8 @@ h3 {
   flex-direction: column;
   min-height: 100vh;
   height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 
   .site-content {
     flex: 1 0 auto;
@@ -119,7 +136,6 @@ img {
 
 .logo-container {
   display: inline-block;
-  z-index: 150;
   position: fixed;
   top: 7px;
   left: 7px;
@@ -173,7 +189,7 @@ img {
 
 .home {
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: normal;
     font-variant: small-caps;
   }
@@ -300,7 +316,7 @@ img {
 }
 
 .container-full {
-  padding: 5em 2em;
+  padding: 2.5em 1em 2em 1em;
 }
 
 .home .intro, .home .services{
@@ -329,13 +345,26 @@ img {
   margin-top: 2em;
 }
 
+.home .logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  img {
+    margin: 1em 1em;
+    width: 100px;
+    height: auto;
+  }
+}
+
 .home .services {
   background: #333 url(images/inn-on-5th.jpg) no-repeat fixed center center;
   background-size: cover;
   padding: 0;
 
   .overlay {
-    padding: 5em 2em;
+    padding: 2.5em 2em 5em;
     background: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.3) 25%,  transparent, rgba(0,0,0, .3) 75%, rgba(0,0,0, .7));
   }
 
@@ -350,10 +379,10 @@ img {
     box-shadow: 0 0 10px 8px rgba(0,0,0, .1);
     display: block;
     list-style: none;
-    background-color: rgba(226, 117, 16, 1);
+    background-color: rgba(226, 117, 16, .9);
     transition: all .2s;
     position: relative;
-    margin: .5em;
+    margin: 1.5em;
     text-align: center;
     text-decoration: none;
     text-shadow: 1px 1px .1em rgba(0,0,0, .5);
@@ -376,6 +405,7 @@ img {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      margin: 0 1em;
     }
   }
 
@@ -386,6 +416,43 @@ img {
   }
 }
 
+.plaque-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plaque {
+  background: #ccc url(images/plaque-bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  height: auto;
+  text-shadow: 1px 1px rgba(255,255,255,.7);
+  margin: 1em;
+
+  span {
+    margin-bottom: .5em;
+  }
+}
+
+.plaque .year {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.plaque .award {
+  display: block;
+}
+
+.plaque .source {
+  display: block;
+  font-size: .5em;
+  font-style: italic;
+}
 
 .alignright {
   float: right; margin: 0 0 1em;
@@ -407,7 +474,7 @@ img {
   text-align: center;
   background-color: #000;
   color: #eee;
-  padding: 50px .5em 1em;
+  padding: 50px .5em 3em;
   position: relative;
   box-shadow: $high-shadow;
 
@@ -437,6 +504,50 @@ img {
   span {
     display: block;
   }
+
+  .button {
+    background-color: #ccc;
+    color: #000;
+    border: 0;
+    line-height: 1.75em;
+    padding: .2em 1em;
+    vertical-align: bottom;
+  }
+
+  input[type=email] {
+    border: 0;
+    line-height: 1.75em;
+    padding: .2em 1em;
+    vertical-align: bottom;
+  }
+
+  .footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.75em;
+    font-size: 1.25em;
+
+    div {
+      width: 100%;
+    }
+  }
+
+  .first {
+    order: 1;
+    margin-bottom: 1em;
+  }
+
+  .second {
+    order: 3;
+  }
+
+  .third {
+    order: 2;
+  }
+
+  .third .sep {
+    display: inline;
+  }
 }
 
 .map {
@@ -465,6 +576,10 @@ img {
   .entry-content {
     margin: 1em;
   }
+}
+
+.inner .cta {
+  display: none;
 }
 
 .cta {
@@ -547,10 +662,27 @@ img {
     padding: 2em;
   }
 
+  .home .logos img {
+    width: 150px;
+  }
+
   .site-footer {
+
     .sep, span {
       display: inline;
       margin: 0 .25em;
+    }
+
+    .second {
+      margin-bottom: -1em;
+
+      .sep {
+        display: none;
+      }
+
+      span {
+        display: block;
+      }
     }
   }
 }
@@ -737,15 +869,64 @@ img {
     border: none;
     width: 50%;
     margin: 0 ;
-    padding: 12em 5em 8em 2em;
+    padding: 10em 5em 6em 2em;
     justify-content: flex-start;
   }
 
   .home .servicing {
     white-space: nowrap;
+    font-size: 1.3em;
+  }
+
+  .home .logos img {
+    margin: 1.5em;
+  }
+
+  .site-footer {
+    padding: 0;
+
+    .footer-sections {
+      margin: 2em 1em;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      font-size: 1em;
+
+      .first {
+        text-align: left;
+        margin-bottom: 0;
+        width: 30%;
+        align-self: center;
+      }
+
+      .second {
+        order: 2;
+        width: 40%;
+        align-self: flex-end;;
+      }
+
+      .third {
+        order: 3;
+        width: 30%;
+        text-align: right;
+        align-self: center;
+      }
+    }
   }
 }
 
+
+@media screen and (min-width: 1000px) {
+  .site-footer .second {
+
+    .sep {
+      display: inline;
+    }
+
+    span {
+      display: inline;
+    }
+  }
+}
 
 @media screen and (min-width: 1400px) {
   body {
@@ -766,6 +947,10 @@ img {
 
   #menu-item-51 {
     width: 225px;
+  }
+
+  .home .logos img {
+    width: 240px;
   }
 }
 

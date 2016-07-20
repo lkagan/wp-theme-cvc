@@ -21,22 +21,25 @@
 				</div><!-- .logo-container-inner -->
 			</a>
 		</div><!-- .logo-container -->
-		<div class="first">
-			Subscribe to our newsletter
-			<form>
-				<input type="email"><input type="submit" value="subscribe">
-			</form>
-		</div><!-- .subscribe -->
-		<div class="second">
-			<span class="phone">1-800-000-0000</span>
-			<span class="footer-item">&copy; <?php echo date('Y') . ' ' . get_bloginfo( 'name' ) ?></span>
-			<span class="sep">|</span>
-			<span class="footer-item signature">Website by <a target="superiocity" href="http://www.superiocity.com">Superiocity</a></span>
-		</div><!-- .misc -->
-		<div class="third">
-			<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
-			<a href="/sitemap">Sitemap</a>
-		</div>
+		<div class="footer-sections">
+			<div class="first">
+				<label for="mce-EMAIL">Subscribe to our newsletter</label>
+				<form action="//cvchospitality.us13.list-manage.com/subscribe/post?u=d4684262c99c2ee203dc6dc06&amp;id=6b411d1052" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d4684262c99c2ee203dc6dc06_6b411d1052" tabindex="-1" value=""></div>
+					<input type="email" value="" name="EMAIL" placeholder="email address" class="required email" id="mce-EMAIL"><input type="submit" class="button" value="subscribe" name="subscribe" id="mc-embedded-subscribe" >
+				</form>
+			</div><!-- .subscribe -->
+			<div class="second">
+				<span class="footer-item signature">Website by <a target="superiocity" href="http://www.superiocity.com">Superiocity</a></span>
+				<span class="sep">|</span>
+				<span class="footer-item">&copy; <?php echo date('Y') . ' ' . get_bloginfo( 'name' ) ?></span>
+			</div><!-- .misc -->
+			<div class="third">
+				<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
+				<span class="sep">|</span>
+				<a href="/sitemap">Sitemap</a>
+			</div>
+		</div><!-- .footer-sections-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
