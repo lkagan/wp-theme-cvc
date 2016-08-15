@@ -78,8 +78,8 @@ input {
 }
 
 h3 {
-  padding-left: 1em;
-  background: url(images/hex-header-999.png)  no-repeat 0 .15em;
+  padding: .25em .5em .25em 1.5em;
+  background: url(images/hex-header-999.png)  no-repeat .25em center ;
   background-size: .85em;
 }
 
@@ -89,7 +89,6 @@ h3 {
   min-height: 100vh;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
 
   .site-content {
     flex: 1 0 auto;
@@ -192,6 +191,10 @@ img {
     font-size: 1.5rem;
     font-weight: normal;
     font-variant: small-caps;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-radius: .25em;
+    display: inline-block;
   }
 }
 
@@ -306,17 +309,25 @@ img {
   padding: 0;
 
   .wrapper {
-    padding: 2em;
-    background: transparent radial-gradient(ellipse at 50% 50%, transparent ,rgba(0,0,0,.7)) no-repeat;
+    padding: 4em 2em;
+    background: transparent radial-gradient(ellipse at 50% 50%, transparent , transparent 30%, rgba(0,0,0,.5)) no-repeat;
     color: #000;
-    font-size: 1.2em;
-    text-shadow: 1px 1px rgba(255,255,255, .7);
+    font-size: 1.5em;
+    text-shadow: 1px 1px rgba(255,255,255, .9);
     text-align: center;
   }
 }
 
 .container-full {
   padding: 2.5em 1em 2em 1em;
+}
+
+.brands-wrapper, .awards-wrapper {
+  background: #fff url('images/bg-hex.png') repeat;
+}
+
+.container-full.brands, .container-full.awards {
+  background-image: linear-gradient(150deg, #fff, rgba(255,255,255, .99) 20%, rgba(255,255,255, .94) 100%);
 }
 
 .home .intro, .home .services{
@@ -358,6 +369,10 @@ img {
   }
 }
 
+.home .services a.animate {
+  transform: scale(1);
+}
+
 .home .services {
   background: #333 url(images/inn-on-5th.jpg) no-repeat fixed center center;
   background-size: cover;
@@ -380,7 +395,7 @@ img {
     display: block;
     list-style: none;
     background-color: rgba(226, 117, 16, .9);
-    transition: all .2s;
+    transition: all .25s;
     position: relative;
     margin: 1.5em;
     text-align: center;
@@ -390,6 +405,7 @@ img {
     font-weight: bold;
     font-size: .75em;
     line-height: 1.5em;
+    transform: scale(0);
 
     div {
       margin: .75em;
@@ -422,7 +438,13 @@ img {
   flex-wrap: wrap;
 }
 
+.plaque.animate {
+  transform: scale(1);
+}
+
 .plaque {
+  transform: scale(0);
+  transition: all .25s;
   background: #ccc url(images/plaque-bg.jpg) no-repeat;
   background-size: 100% 100%;
   display: inline-block;
@@ -432,6 +454,7 @@ img {
   height: auto;
   text-shadow: 1px 1px rgba(255,255,255,.7);
   margin: 1em;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
 
   span {
     margin-bottom: .5em;
@@ -594,6 +617,7 @@ img {
   display: block;
   width: 90%;
   max-width: 1400px;
+  z-index: 10;
 
   .content {
     border: solid 2px black;
@@ -873,6 +897,15 @@ img {
     justify-content: flex-start;
   }
 
+  #intro-section {
+    transition: all 1s;
+    transform: translateX(-100%);
+  }
+
+  #intro-section.animate {
+    transform: translateX(0);
+  }
+
   .home .servicing {
     white-space: nowrap;
     font-size: 1.3em;
@@ -880,6 +913,10 @@ img {
 
   .home .logos img {
     margin: 1.5em;
+  }
+
+  .home h3 {
+    font-size: 1.8em;
   }
 
   .site-footer {

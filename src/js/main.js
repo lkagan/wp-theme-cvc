@@ -48,11 +48,53 @@
         setContentTopMargin();
     });
 
+
     window.addEventListener('resize', setContentTopMargin);
     document.addEventListener( 'click', closeMenu);
     document.addEventListener( 'touchstart', closeMenu);
+    document.addEventListener( 'scroll', animateItems );
 
 
+    /**
+     * Animate items in viewport.
+     */
+    function animateItems()
+    {
+        var intro = document.getElementById('intro-section');
+        var services = document.querySelectorAll('.services .links a');
+        var awards = document.getElementsByClassName('plaque');
+
+        // Animate the intro block
+        if ( typeof intro != 'undefined' ) {
+            if ( inViewport( intro, 300 ) ) {
+                intro.classList.add('animate');
+            } else {
+                intro.classList.remove('animate');
+            }
+        }
+
+        // Animate the services links
+        if ( typeof services != 'undefined' ) {
+            for (var i = 0; i < services.length; ++i) {
+                if ( inViewport( services[i] ) ) {
+                    services[i].classList.add('animate');
+                } else {
+                    services[i].classList.remove('animate');
+                }
+            }
+        }
+
+        // Animate the awards
+        if ( typeof awards != 'undefined' ) {
+            for (var i = 0; i < awards.length; ++i) {
+                if ( inViewport( awards[i] ) ) {
+                    awards[i].classList.add('animate');
+                } else {
+                    awards[i].classList.remove('animate');
+                }
+            }
+        }
+    }
 
     /**
      * Add enough margin to the content to push it below the header
@@ -68,18 +110,23 @@
     /**
      * Check if an element is within the window viewport.
      */
-    function inViewport(element)
+    function inViewport(element, padding)
     {
         if(element == undefined) {
             return false;
         }
 
+        padding = padding || 0;
         var boundingBox = element.getBoundingClientRect();
         var windowHeight = document.documentElement.clientHeight;
+        var topLimit = padding;
+        var bottomLimit = windowHeight - padding;
 
-        if(boundingBox.bottom < windowHeight && boundingBox.top > 0) {
+        if ( ( boundingBox.top > topLimit || boundingBox.bottom > topLimit ) &&
+                ( boundingBox.top < bottomLimit || boundingBox.bottom < bottomLimit ) ) {
             return true;
         }
+
     }
 
 
