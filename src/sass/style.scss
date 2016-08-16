@@ -168,6 +168,7 @@ img {
 
 .logo-phone {
   display: none;
+  color: #000;
 }
 
 .site-header .phone {
@@ -282,7 +283,7 @@ img {
   overflow: hidden;
 }
 
-.home .hero {
+.hero {
   text-align: center;
   filter: drop-shadow(0 0 10px #000);
   background-size: cover;
@@ -290,7 +291,13 @@ img {
   height: 200px;
   background: url(images/header-hex-685.png) no-repeat center center;
   background-size: contain;
+}
 
+.inner .hero {
+  background: url(images/header-hex-inner-685.png) no-repeat center center;
+  background-size: contain;
+  margin:  1em .5em 0 .5em;
+  height: 150px;
 }
 
 .hero-container-wrapper {
@@ -636,6 +643,13 @@ img {
   }
 }
 
+@media screen and (min-width: 350px) {
+  .inner .hero {
+    height: 200px;
+  }
+}
+
+
 @media screen and (min-width: 500px) {
 
   .logo-container {
@@ -664,10 +678,14 @@ img {
     display: none;
   }
 
-  .home .hero {
+  .hero {
     margin: 6.5em 1em;
     padding: 0;
     height: 450px;
+  }
+
+  .inner .hero {
+    height: 275px;
   }
 
   .cta {
@@ -710,6 +728,13 @@ img {
 }
 
 
+@media screen and (min-width: 650px) {
+  .inner .hero {
+    height: 340px;
+  }
+}
+
+
 @media screen and (min-width: 800px) {
 
   .menu-open {
@@ -736,7 +761,6 @@ img {
 
   .logo-phone {
     display: block;
-    color: #999;
     font-size: 9px;
     letter-spacing: .1em;
     text-align: center;
@@ -866,8 +890,14 @@ img {
 
   }
 
-  .home .hero {
+  .hero {
     background-image: url(images/header-hex-1150.png);
+  }
+
+  .inner .hero {
+    background: url(images/header-hex-inner-1150.png) no-repeat center center;
+    background-size: contain;
+    height: 275px;
   }
 
   .home .services a {
@@ -921,6 +951,12 @@ img {
 
 
 @media screen and (min-width: 1000px) {
+  .inner .hero {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .site-footer {
     padding: 0;
 
@@ -973,6 +1009,10 @@ img {
   .home .logos img {
     width: 240px;
   }
+
+  .inner .hero {
+    margin-top: 2em;
+  }
 }
 
 
@@ -992,7 +1032,7 @@ img {
 
 
 @media screen and (min-width: 2000px) {
-  .home .hero {
+  .hero {
     background-image: url(images/header-hex-2000.png);
     height: 600px;
   }
