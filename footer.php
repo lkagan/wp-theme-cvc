@@ -28,24 +28,24 @@
 					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d4684262c99c2ee203dc6dc06_6b411d1052" tabindex="-1" value=""></div>
 					<input type="email" value="" name="EMAIL" placeholder="email address" class="required email" id="mce-EMAIL"><input type="submit" class="button" value="subscribe" name="subscribe" id="mc-embedded-subscribe" >
 				</form>
-			</div><!-- .subscribe -->
+			</div><!-- .first-->
 			<div class="second">
+				<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
+				<span class="sep">|</span>
+				<a href="/sitemap">Sitemap</a>
+			</div><!-- .second-->
+			<div class="third">
 				<div>
-					<span class="footer-item">AR# AA26000764</span>
+					<span class="footer-item">AR Lic #AA26000764</span>
 					<span class="sep">|</span>
-					<span class="footer-item">GC# CGC1520405</span>
+					<span class="footer-item">GC Lic #CGC1520405</span>
 				</div>
 				<div>
 					<span class="footer-item">&copy; <?php echo date('Y') . ' ' . get_bloginfo( 'name' ) ?></span>
 					<span class="sep">|</span>
 					<span class="footer-item signature">Website by <a target="superiocity" href="http://www.superiocity.com">Superiocity</a></span>
 				</div>
-			</div><!-- .misc -->
-			<div class="third">
-				<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
-				<span class="sep">|</span>
-				<a href="/sitemap">Sitemap</a>
-			</div>
+			</div><!-- .third -->
 		</div><!-- .footer-sections-->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
