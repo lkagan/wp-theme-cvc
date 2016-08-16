@@ -309,7 +309,7 @@ img {
   padding: 0;
 
   .wrapper {
-    padding: 4em 2em;
+    padding: 2em;
     background: transparent radial-gradient(ellipse at 50% 50%, transparent , transparent 30%, rgba(0,0,0,.5)) no-repeat;
     color: #000;
     font-size: 1.5em;
@@ -319,7 +319,7 @@ img {
 }
 
 .container-full {
-  padding: 2.5em 1em 2em 1em;
+  padding: 2.5em 1em 3.5em 1em;
 }
 
 .brands-wrapper, .awards-wrapper {
@@ -371,6 +371,7 @@ img {
 
 .home .services a.animate {
   transform: scale(1);
+  opacity: 1;
 }
 
 .home .services {
@@ -395,7 +396,9 @@ img {
     display: block;
     list-style: none;
     background-color: rgba(226, 117, 16, .9);
-    transition: all .25s;
+    transform: scale(0);
+    opacity: 0.5;
+    transition: transform .25s, opacity .5s;
     position: relative;
     margin: 1.5em;
     text-align: center;
@@ -405,7 +408,6 @@ img {
     font-weight: bold;
     font-size: .75em;
     line-height: 1.5em;
-    transform: scale(0);
 
     div {
       margin: .75em;
@@ -444,7 +446,7 @@ img {
 
 .plaque {
   transform: scale(0);
-  transition: all .25s;
+  transition: all .5s;
   background: #ccc url(images/plaque-bg.jpg) no-repeat;
   background-size: 100% 100%;
   display: inline-block;
@@ -502,6 +504,7 @@ img {
   box-shadow: $high-shadow;
 
   .logo-container {
+    display: none;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -707,6 +710,10 @@ img {
       span {
         display: block;
       }
+    }
+
+    .logo-container {
+      display: block;
     }
   }
 }

@@ -76,7 +76,7 @@
         // Animate the services links
         if ( typeof services != 'undefined' ) {
             for (var i = 0; i < services.length; ++i) {
-                if ( inViewport( services[i] ) ) {
+                if ( inViewport( services[i], 50 ) ) {
                     services[i].classList.add('animate');
                 } else {
                     services[i].classList.remove('animate');
@@ -87,7 +87,7 @@
         // Animate the awards
         if ( typeof awards != 'undefined' ) {
             for (var i = 0; i < awards.length; ++i) {
-                if ( inViewport( awards[i] ) ) {
+                if ( inViewport( awards[i], 50 ) ) {
                     awards[i].classList.add('animate');
                 } else {
                     awards[i].classList.remove('animate');

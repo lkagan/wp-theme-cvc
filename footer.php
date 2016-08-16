@@ -30,9 +30,16 @@
 				</form>
 			</div><!-- .subscribe -->
 			<div class="second">
-				<span class="footer-item signature">Website by <a target="superiocity" href="http://www.superiocity.com">Superiocity</a></span>
-				<span class="sep">|</span>
-				<span class="footer-item">&copy; <?php echo date('Y') . ' ' . get_bloginfo( 'name' ) ?></span>
+				<div>
+					<span class="footer-item">AR# AA26000764</span>
+					<span class="sep">|</span>
+					<span class="footer-item">GC# CGC1520405</span>
+				</div>
+				<div>
+					<span class="footer-item">&copy; <?php echo date('Y') . ' ' . get_bloginfo( 'name' ) ?></span>
+					<span class="sep">|</span>
+					<span class="footer-item signature">Website by <a target="superiocity" href="http://www.superiocity.com">Superiocity</a></span>
+				</div>
 			</div><!-- .misc -->
 			<div class="third">
 				<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
