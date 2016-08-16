@@ -66,15 +66,16 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
-		<div class='hero-container-wrapper'>
-			<div class="hero-container" id="hero-container">
-				<section class="hero">
-				</section>
-			</div><!-- .hero-container -->
-		</div><!-- .hero-conteiner-wrapper -->
-		<div class="cta">
-			<div class="content">
-				<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
-				<div class="phone"><a href="tel:+1-800-940-7619"><i class="fa fa-phone"></i> (800) 940-7619</a></div>
+		<div class="site-content-overlay">
+			<div class='hero-container-wrapper'>
+				<div class="hero-container" id="hero-container">
+					<section class="hero">
+					</section>
+				</div><!-- .hero-container -->
+			</div><!-- .hero-conteiner-wrapper -->
+			<div class="cta">
+				<div class="content">
+					<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
+					<div class="phone"><a href="tel:+1-800-940-7619"><i class="fa fa-phone"></i> (800) 940-7619</a></div>
+				</div>
 			</div>
-		</div>
