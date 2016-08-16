@@ -305,6 +305,11 @@ img {
   background: url(images/brushed-metal.jpg) repeat;
 }
 
+.inner .hero-container-wrapper {
+  box-shadow: 0 4px 4px rgba(0,0,0,.5);
+  border-bottom: none;
+}
+
 .hero-container {
   position: relative;
   background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
