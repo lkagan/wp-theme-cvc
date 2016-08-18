@@ -74,7 +74,7 @@ function superiocity_scripts_styles_footer() {
 	$themeUrl    = get_template_directory_uri();
 	$faVer       = '4.5.0';
 	$faUrl       = "//maxcdn.bootstrapcdn.com/font-awesome/$faVer/css/font-awesome.min.css";
-	$gFontUrl    = '//fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,700italic,400italic|Quicksand:300';
+	$gFontUrl    = '//fonts.googleapis.com/css?family=Merriweather';
 	$mainJsUrl   = $themeUrl . '/js/main.min.js';
 	$mainJsPath  = get_template_directory() . '/js/main.min.js';
 	$mainJsVer   = file_exists( $mainJsPath ) ? filemtime( $mainJsPath ) : '';
