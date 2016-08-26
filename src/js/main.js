@@ -65,7 +65,7 @@
         var awards = document.getElementsByClassName('plaque');
 
         // Animate the intro block
-        if ( typeof intro != 'undefined' ) {
+        if (intro) {
             if ( inViewport( intro, 300 ) ) {
                 intro.classList.add('animate');
             } else {
@@ -74,7 +74,7 @@
         }
 
         // Animate the services links
-        if ( typeof services != 'undefined' ) {
+        if (services) {
             for (var i = 0; i < services.length; ++i) {
                 if ( inViewport( services[i], 50 ) ) {
                     services[i].classList.add('animate');
@@ -85,7 +85,7 @@
         }
 
         // Animate the awards
-        if ( typeof awards != 'undefined' ) {
+        if (awards) {
             for (var i = 0; i < awards.length; ++i) {
                 if ( inViewport( awards[i], 50 ) ) {
                     awards[i].classList.add('animate');

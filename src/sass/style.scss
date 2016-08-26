@@ -27,6 +27,7 @@ body {
   height: 100vh;
   color: #333;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 a[href^="tel:"] {
@@ -52,20 +53,31 @@ h3 {
   margin-bottom: 1em;
 }
 
-.button {
+a, a:visited {
+  color: rgb(226,117,16);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: rgb(255,130,14);
+  text-decoration: underline;
+}
+
+.button, .button:visited {
   color: #eee;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  background-color: #000;
+  background-color: rgb(226,117,16);
   padding: .5em 1em;
-  box-shadow: 2px 2px 2px rgba(0,0,0, .5);
-  border: 1px #666 solid;
+  box-shadow: 2px 2px 2px rgba(0,0,0, .3);
+  border-radius: .25em;
   text-decoration: none;
   text-transform: lowercase;
 }
 
 .button:hover {
-  background-color: #333;
+  background-color: rgb(255,130,14);
+  text-decoration: none;
 }
 
 .button:active {
@@ -393,7 +405,7 @@ img {
 }
 
 .container-full.brands, .container-full.awards {
-  background-image: linear-gradient(150deg, #fff, rgba(255,255,255, .99) 20%, rgba(255,255,255, .94) 100%);
+  background-image: linear-gradient(150deg, #fff, rgba(255,255,255, .99) 20%, rgba(255,255,255, .97) 100%);
 }
 
 .home .intro, .home .services{
@@ -464,7 +476,7 @@ img {
     background-color: rgba(226, 117, 16, .9);
     transform: scale(0);
     opacity: 0.5;
-    transition: transform .25s, opacity .5s;
+    transition: transform 1s, opacity 1s;
     position: relative;
     margin: 1.5em;
     text-align: center;
@@ -514,7 +526,7 @@ img {
 .plaque {
   color: #000;
   transform: scale(0);
-  transition: all .5s;
+  transition: all 1s;
   background: #ccc url(images/plaque-bg.jpg) no-repeat;
   background-size: 100% 100%;
   display: inline-block;
@@ -714,7 +726,7 @@ img {
   }
 
   .site-content-overlay {
-    background-image: linear-gradient(150deg, #fff, rgba(255, 255, 255, .99) 20%, rgba(255, 255, 255, .97) 100%);
+    background-image: linear-gradient(130deg, #fff, rgba(255, 255, 255, .985) 50%, rgba(255, 255, 255, .97) 100%);
     flex-grow: 1;
     padding-bottom: 2em;
   }
@@ -755,6 +767,27 @@ img {
     border: none;
     padding: 0;
   }
+}
+
+// About Us
+.page-id-28 {
+  .page-photos {
+    float: right;
+    margin-left: 2em;
+    width: 30%;
+
+    .nobreak {
+      display: flex;
+    }
+
+    img {
+      box-shadow: 1px 1px 8px rgba(0,0,0,.5);
+      margin: 5px;
+      height: auto;
+    }
+  }
+
+
 }
 
 @media screen and (min-width: 350px) {
@@ -898,7 +931,7 @@ img {
 
   .logo-phone {
     display: block;
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: .1em;
     text-align: center;
   }
