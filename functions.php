@@ -85,11 +85,3 @@ function superiocity_scripts_styles_footer() {
 }
 
 add_action( 'get_footer', 'superiocity_scripts_styles_footer' );
-
-
-/**
- * Hide the admin bar for all users
- */
-add_filter( 'show_admin_bar', '__return_false' );
-
-
