@@ -60,7 +60,6 @@ function superiocity_scripts_styles() {
 	$mainCssVer  = file_exists( $mainCssPath ) ? filemtime( $mainCssPath ) : '';
 
 	wp_enqueue_style( 'superiocity-style', $mainCssUrl, null, $mainCssVer );
-	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'wp-embed' );
 }
 
@@ -75,7 +74,7 @@ function superiocity_scripts_styles_footer() {
 	$themeUrl    = get_template_directory_uri();
 	$faVer       = '4.5.0';
 	$faUrl       = "//maxcdn.bootstrapcdn.com/font-awesome/$faVer/css/font-awesome.min.css";
-	$gFontUrl    = '//fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,700italic,400italic|Quicksand:300';
+	$gFontUrl    = '//fonts.googleapis.com/css?family=Merriweather';
 	$mainJsUrl   = $themeUrl . '/js/main.min.js';
 	$mainJsPath  = get_template_directory() . '/js/main.min.js';
 	$mainJsVer   = file_exists( $mainJsPath ) ? filemtime( $mainJsPath ) : '';
@@ -86,11 +85,3 @@ function superiocity_scripts_styles_footer() {
 }
 
 add_action( 'get_footer', 'superiocity_scripts_styles_footer' );
-
-
-/**
- * Hide the admin bar for all users
- */
-add_filter( 'show_admin_bar', '__return_false' );
-
-

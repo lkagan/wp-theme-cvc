@@ -13,12 +13,15 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
+<?php if ( is_front_page() || is_home() ) :  ?>
+	<link rel="prerender" href="/portfolio/">
+<?php endif; ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( ! is_front_page() ? 'inner' : '' ); ?>>
+<body <?php body_class( ! is_front_page() ? 'inner ' : '' ); ?>>
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
@@ -38,7 +41,7 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 		<div class="phone">
-			<a href="tel:+1-800-000-0000"><i class="fa fa-phone"></i> 1-800-000-0000</a>
+			<a href="tel:+1-800-940-7619"><i class="fa fa-phone"></i> 1-800-940-7619</a>
 			<div class="tip"><i class="fa fa-hand-pointer-o"></i> tap to call</div>
 		</div>
 
@@ -53,7 +56,7 @@
 								 sizes="(max-width: 499px) 75px, (max-width: 1399px) 110px, 175px"
 								 alt="CVC Hospitality Logo"class="logo">
 					<div class="logo-sub">Hospitality, Inc.</div>
-					<div class="logo-phone"><i class="fa fa-phone"></i> 1-800-000-0000</div>
+					<div class="logo-phone"><i class="fa fa-phone"></i> 1-800-940-7619</div>
 				</div><!-- .logo-container-inner -->
 			</a>
 		</div><!-- .logo-container -->
@@ -66,15 +69,16 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">
-		<div class='hero-container-wrapper'>
-			<div class="hero-container" id="hero-container">
-				<section class="hero">
-				</section>
-			</div><!-- .hero-container -->
-		</div><!-- .hero-conteiner-wrapper -->
-		<div class="cta">
-			<div class="content">
-				<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
-				<div class="phone"><a href="tel:+1-800-000-0000"><i class="fa fa-phone"></i> (800) 000-0000</a></div>
+		<div class="site-content-overlay">
+			<div class='hero-container-wrapper'>
+				<div class="hero-container" id="hero-container">
+					<section class="hero">
+					</section>
+				</div><!-- .hero-container -->
+			</div><!-- .hero-conteiner-wrapper -->
+			<div class="cta">
+				<div class="content">
+					<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
+					<div class="phone"><a href="tel:+1-800-940-7619"><i class="fa fa-phone"></i> (800) 940-7619</a></div>
+				</div>
 			</div>
-		</div>

@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     sourcemaps = require('gulp-sourcemaps'),
     sassPath = './src/sass',
-    jsPath = './src/js',
+    jsPath = 'src/js',
     imgPath = 'src/images';
 
 
