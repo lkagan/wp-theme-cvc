@@ -7,9 +7,9 @@ Text Domain: superiocity
 
 $card-shadow: 1px 1px 4px 1px rgba(0,0,0,.2);
 $high-shadow: 0px 0px 10px 8px rgba(0,0,0,.3);
-$font-content: Merriweather,Georgia,serif;
 $font-serif: 'Century Regular', 'Times New Roman', serif;
 $font-sans: helvetica,arial,sans-serif;
+$font-content: $font-sans;
 $color1: #543449;
 $color1: #cccccc;
 $color2: #999;
@@ -73,17 +73,17 @@ a:hover, a:active {
   border-radius: .25em;
   text-decoration: none;
   text-transform: lowercase;
+  font-family: $font-sans;
 }
 
 .button:hover {
+  color: #fff;
   background-color: rgb(255,130,14);
   text-decoration: none;
 }
 
 .button:active {
   position: relative;
-  top: 2px;
-  left: 2px;
   box-shadow: 0px 0px 2px rgba(0,0,0, .5);
 }
 
@@ -150,7 +150,7 @@ h3 {
   }
 }
 
-.inner .page {
+.inner article {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -182,6 +182,10 @@ img {
   color: #ddd;
   box-shadow: $high-shadow;
   border-bottom: solid 1px #999;
+}
+
+.admin-bar .site-header {
+  top: 32px;
 }
 
 .site-branding {
@@ -368,17 +372,47 @@ img {
 
 .hero-container-wrapper {
   border-bottom: solid 1px #999;
-  background: url(images/brushed-metal.jpg) repeat;
+//  background: url(images/brushed-metal.jpg) repeat;
+  background-color: #681d1d;
+  animation-name: cycle-colors;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cycle-colors {
+
+  from {
+    background-color: #681d1d;
+  }
+
+  17% {
+    background-color: #671d68;
+  }
+
+  50% {
+    background-color: #1d1f68;
+  }
+
+  83% {
+    background-color: #1d685e;
+  }
+
+  to {
+    background-color: #1e681d;
+  }
+
 }
 
 .inner .hero-container-wrapper {
   box-shadow: 0 4px 4px rgba(0,0,0,.5);
-  border-bottom: none;
+  border-bottom: solid 1px #666;
 }
 
 .hero-container {
   position: relative;
-  background-image: radial-gradient(ellipse at 50% 50%, transparent,  rgba(0,0,0, .9));
+  background-image: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.0), rgba(0,0,0, .9));
   overflow: hidden;
 }
 
@@ -707,8 +741,22 @@ img {
 }
 
 .inner {
+  .entry-header {
+    text-align: left;
+    background: #ddd;
+    border-top: 1px solid #333;
+  }
+
   h1 {
-    margin: 1.5em .5em .5em;
+    display: block;
+    color: #333;
+    border-radius: 0;
+    text-shadow: -2px -2px 2px #efefef;
+    border-top: none;
+    position: relative;
+    padding: .25em 1em;
+    box-shadow: 2px 2px 1px rgba(0,0,0, .2);
+    background-image: none;
   }
 
   h2 {
@@ -726,7 +774,7 @@ img {
   }
 
   .site-content-overlay {
-    background-image: linear-gradient(130deg, #fff, rgba(255, 255, 255, .985) 50%, rgba(255, 255, 255, .97) 100%);
+    background-image: linear-gradient(130deg,#fff,rgba(255,255,255,.985) 50%,rgba(255,255,255,.97) 100%);
     flex-grow: 1;
     padding-bottom: 2em;
   }
@@ -734,6 +782,7 @@ img {
 
 .inner .cta {
   display: none;
+
 }
 
 .cta {
@@ -1206,7 +1255,7 @@ img {
     height: 350px;
   }
 
-  .inner .page {
+  .inner article {
     max-width: 75%;
   }
 }

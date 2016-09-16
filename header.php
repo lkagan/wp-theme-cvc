@@ -13,12 +13,15 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
+<?php if ( is_front_page() || is_home() ) :  ?>
+	<link rel="prerender" href="/portfolio/">
+<?php endif; ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( ! is_front_page() ? 'inner' : '' ); ?>>
+<body <?php body_class( ! is_front_page() ? 'inner ' : '' ); ?>>
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
