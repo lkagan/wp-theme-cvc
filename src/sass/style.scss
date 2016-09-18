@@ -111,7 +111,7 @@ input {
     list-style-type: none;
     margin-left: 0;
     padding-left: 1.25em;
-    background: url(images/hex-bullet-999.png)  no-repeat 0 .17em;
+    background: url(images/hex-bullet-999.png)  no-repeat 0 .4em;
     background-size: .75em;
   }
 }
@@ -128,9 +128,15 @@ h3 {
   font-weight: normal;
   font-variant: small-caps;
   display: inline-block;
-  padding:  .15em .5em;
+  padding:  .15em .5em .15em .75em;
   background: url(images/hex-header-999.png)  no-repeat .25em center ;
   background-size: .85em;
+}
+
+.inner .breadcrumb {
+  padding:  .5em .5em 0 .75em;
+  margin-bottom: -.25em;
+  text-align: left;
 }
 
 
@@ -373,6 +379,7 @@ img {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-delay: 1s;
 }
 
 @keyframes cycle-colors {
@@ -1243,10 +1250,14 @@ img {
     text-align: center;
   }
 
-  .inner h1 {
+  .inner h1, .inner .breadcrumb {
     text-align: left;
     display: inline-block;
     width: 1300px;
+  }
+
+  .inner .breadcrumb {
+    padding-top: .5em;
   }
 
   .inner article {
@@ -1275,7 +1286,7 @@ img {
   }
 
 
-  .inner h1 {
+  .inner h1, .inner .breadcrumb {
     width: 85%;
   }
 
