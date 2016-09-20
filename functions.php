@@ -85,3 +85,5 @@ function superiocity_scripts_styles_footer() {
 }
 
 add_action( 'get_footer', 'superiocity_scripts_styles_footer' );
+
+add_action( 'show_admin_bar', '__return_false');
