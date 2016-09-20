@@ -122,7 +122,7 @@ h3 {
   background-size: .85em;
 }
 
-.inner h1 {
+.inner h1, .inner h2 {
   font-family: $font-sans;
   font-size: 1.5rem;
   font-weight: normal;
@@ -131,6 +131,10 @@ h3 {
   padding:  .15em .5em .15em .75em;
   background: url(images/hex-header-999.png)  no-repeat .25em center ;
   background-size: .85em;
+}
+
+.inner h2 {
+  padding-left: 1.3em;
 }
 
 .inner .breadcrumb {
@@ -844,6 +848,52 @@ img {
 
 }
 
+.headshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.headshots figure {
+  margin: 1em 2em 0 2em;
+  text-align: center;
+}
+
+.headshots img {
+  border-radius: 50%;
+  margin: 0;
+  border: solid 1px #ccc;
+  padding: .5em;
+  background-color: #fff;
+  max-width: 150px;
+  height: auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0, .1);
+}
+
+.headshots figcaption {
+  background-color: #ddd;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: solid 1px #ccc;
+  position: relative;
+  top: -2.25em;
+  box-shadow: 2px 2px 4px rgba(0,0,0, .1);
+  padding: .25em;
+}
+
+.headshots figcaption .name {
+  font-size: .85em;
+  margin-bottom: .25em
+}
+
+.headshots figcaption .position{
+  font-size: .75em;
+  font-style: italic;
+
+}
+
+
 @media screen and (min-width: 350px) {
   .inner .hero {
     height: 200px;
@@ -1077,6 +1127,11 @@ img {
       text-decoration: none;
       border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
+    }
+
+    li .sub-menu {
+      columns: 2;
+      transform: translateX(-30%);
     }
 
     li .sub-menu, li .children {
