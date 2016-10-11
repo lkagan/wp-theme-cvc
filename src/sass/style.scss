@@ -67,6 +67,13 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1em;
+}
 .button, .button:visited {
   border: none;
   font-size: 1em;
@@ -432,10 +439,10 @@ img {
   padding: 0;
 
   .wrapper {
-    padding: 2em;
+    padding: 2em .5em;
     background: transparent radial-gradient(ellipse at 50% 50%, transparent , transparent 30%, rgba(0,0,0,.5)) no-repeat;
     color: #ccc;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
   }
 }
@@ -552,7 +559,7 @@ img {
   }
 
   a:hover {
-    transform: scale(1.1);
+    background-color: rgb(255,130,14);
   }
 }
 
@@ -675,15 +682,20 @@ img {
     width: 75px;
   }
 
+  a {
+    color: #aaa;
+    text-decoration: underline;
+  }
+
+  .logo-container a {
+    text-decoration: none;
+  }
+
   .logo-sub {
     font-size: 9px;
     line-height: 1em;
   }
 
-  a {
-    color: #aaa;
-    text-decoration: underline;
-  }
 
   input[type=email] {
     background-color: #ddd;
@@ -796,7 +808,7 @@ img.building {
   }
 
   .entry-content {
-    margin: 1em 1em 3em;
+    margin: 3em 1em ;
   }
 
   .site-content {
@@ -841,12 +853,17 @@ img.building {
   }
 
   .phone {
-    font-family: $font-sans;
     margin-top: 1em;
-    color: #000;
-    font-weight: bold;
     border: none;
     padding: 0;
+  }
+
+  .phone a, .phone a:hover {
+    font-family: $font-sans;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    cursor: default;
   }
 }
 
@@ -984,6 +1001,7 @@ div.wpcf7-validation-errors {
 .contact-inner .wpcf7 input[type=text],
 .contact-inner .wpcf7 input[type=email],
 .contact-inner .wpcf7 textarea {
+  box-sizing: border-box;
   font-size: 1.2em;
   line-height: 1.5em;
   border: solid 1px #ccc;
@@ -1009,7 +1027,6 @@ div.wpcf7-validation-errors {
 }
 
 .construction-list-wrapper {
-  text-align: center;
 
   ul.construction {
     padding: 0;
@@ -1099,6 +1116,16 @@ div.wpcf7-validation-errors {
     padding: 2em;
   }
 
+  .home .hex-bullets {
+    columns: 2;
+    column-width: fit-content;
+
+    li {
+      margin-left: 1em;
+      -webkit-column-break-inside: avoid;
+    }
+  }
+
   .home .logos img {
     width: 150px;
   }
@@ -1170,7 +1197,8 @@ div.wpcf7-validation-errors {
     .image-wrapper {
       display: inline-block;
       float: right;
-      width: 40%;
+      width: 50%;
+      max-width: 650px;
     }
 
     img.services {
@@ -1355,7 +1383,6 @@ div.wpcf7-validation-errors {
     font-size: 1em;
 
     div {
-      height: 200px;
       width: 200px;
     }
   }
@@ -1396,6 +1423,10 @@ div.wpcf7-validation-errors {
 
   .home h3 {
     font-size: 1.8em;
+  }
+
+  .home .testimonials .wrapper {
+    padding: 2em;
   }
 
   .general-info-wrapper {
@@ -1500,6 +1531,10 @@ div.wpcf7-validation-errors {
 
   .home .logos img {
     width: 240px;
+  }
+
+  .home .services .links {
+    padding: 4em;
   }
 
   .inner .hero {
