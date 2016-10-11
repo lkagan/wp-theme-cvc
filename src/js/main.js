@@ -20,6 +20,17 @@
             }
         })();
 
+        // Disable the google map iframe from capturing scroll until clicked.
+        document.addEventListener('click', function() {
+            var map = document.getElementById('google-map');
+
+            if(map == undefined) {
+                return true;
+            }
+
+            document.getElementById('google-map').classList.remove('scrolloff');
+        });
+
 
         // Small screen menu open
         document.getElementsByClassName('menu-open')[0]
@@ -31,6 +42,7 @@
         // Small screen menu close 
         document.getElementsByClassName('menu-close')[0]
             .addEventListener('click', function(e) {
+                e.preventDefault();
                 document.getElementsByClassName('main-nav-wrapper')[0].classList.remove('open');
             });
 
