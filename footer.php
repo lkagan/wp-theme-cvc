@@ -33,7 +33,7 @@
 			<div class="second">
 				<a href="https://www.linkedin.com/company/2571885">LinkedIn</a>
 				<span class="sep">|</span>
-				<a href="/sitemap">Sitemap</a>
+				<a href="/sitemap/">Sitemap</a>
 			</div><!-- .second-->
 			<div class="third">
 				<div>
