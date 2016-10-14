@@ -136,6 +136,26 @@ h3 {
   margin: 0;
 }
 
+.error404.inner .site-content {
+  background-image: none;
+}
+
+.error404.inner h1 {
+  text-align: center;
+  margin-top: 1em;
+  font-variant: none;
+}
+
+.error404.inner .page-content {
+  text-align: center;
+  margin: 1em;
+}
+
+.error404.inner .page-content img {
+  height: auto;
+}
+
+
 .inner h1, .inner h2 {
   font-family: $font-sans;
   font-size: 1.5rem;
