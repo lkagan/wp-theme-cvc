@@ -12,11 +12,12 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'superiocity' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Whoops! You caught our team laying down on the job.', 'superiocity' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'superiocity' ); ?></p>
+					<p>Sorry, the page you're looking for doesn't exist.</p>
+                    <img src="<?php echo get_template_directory_uri() ?>/images/dog.jpg" width="689" height="433" alt="dog laying down" >
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
