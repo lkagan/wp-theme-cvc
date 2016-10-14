@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Whoops! You caught our team laying down on the job.', 'superiocity' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Whoops! You caught us laying down on the job.', 'superiocity' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
