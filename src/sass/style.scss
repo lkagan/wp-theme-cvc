@@ -123,9 +123,6 @@ input {
   li {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 1.25em;
-    background: url(images/hex-bullet-999.png)  no-repeat 0 .4em;
-    background-size: .75em;
   }
 }
 
@@ -469,7 +466,6 @@ img {
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
-    box-shadow: 20px 20px 30px 4px rgba(0,0,0, .5);
   }
 }
 
@@ -1388,14 +1384,13 @@ div.wpcf7-validation-errors {
 
   .home .intro .wrapper {
     background-color: rgba(0,0,0, .7);
-    border-top-right-radius: 75%;
     flex-wrap: wrap;
     border: none;
     border-right: 1px solid #333;
     width: 50%;
+    max-width: 1000px;
     margin: 0 ;
     padding: 10em 5em 6em 2em;
-    justify-content: flex-start;
   }
 
   #intro-section {
