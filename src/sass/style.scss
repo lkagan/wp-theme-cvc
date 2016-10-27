@@ -411,39 +411,9 @@ img {
 
 .hero-container-wrapper {
   border-bottom: solid 1px #999;
-  background-color: #681d1d;
-  animation-name: cycle-colors;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 1s;
-  transform: translateZ(0);
+  background: url(images/brushed-metal.jpg) repeat;
 }
 
-@keyframes cycle-colors {
-
-  from {
-    background-color: #681d1d;
-  }
-
-  17% {
-    background-color: #671d68;
-  }
-
-  50% {
-    background-color: #1d1f68;
-  }
-
-  83% {
-    background-color: #1d685e;
-  }
-
-  to {
-    background-color: #1e681d;
-  }
-
-}
 
 .inner .hero-container-wrapper {
   border-bottom: solid 1px #666;
@@ -456,13 +426,14 @@ img {
 }
 
 .home .testimonials {
-  background: #462846;
+  background: url(images/brushed-metal.jpg) repeat;
   padding: 0;
 
   .wrapper {
     padding: 2em .5em;
     background: transparent radial-gradient(ellipse at 50% 50%, transparent , transparent 30%, rgba(0,0,0,.5)) no-repeat;
-    color: #ccc;
+    color: #333;
+    text-shadow: -1px -1px 1px #ddd;
     font-size: 1.2em;
     text-align: center;
   }
@@ -1077,6 +1048,10 @@ div.wpcf7-validation-errors {
   img.services {
     height: auto;
   }
+}
+
+.project .button + p {
+  margin-top: 2em;
 }
 
 
