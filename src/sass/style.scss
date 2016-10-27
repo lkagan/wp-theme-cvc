@@ -411,39 +411,9 @@ img {
 
 .hero-container-wrapper {
   border-bottom: solid 1px #999;
-  background-color: #681d1d;
-  animation-name: cycle-colors;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-delay: 1s;
-  transform: translateZ(0);
+  background: url(images/brushed-metal.jpg) repeat;
 }
 
-@keyframes cycle-colors {
-
-  from {
-    background-color: #681d1d;
-  }
-
-  17% {
-    background-color: #671d68;
-  }
-
-  50% {
-    background-color: #1d1f68;
-  }
-
-  83% {
-    background-color: #1d685e;
-  }
-
-  to {
-    background-color: #1e681d;
-  }
-
-}
 
 .inner .hero-container-wrapper {
   border-bottom: solid 1px #666;
