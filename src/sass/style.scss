@@ -426,13 +426,14 @@ img {
 }
 
 .home .testimonials {
-  background: #462846;
+  background: url(images/brushed-metal.jpg) repeat;
   padding: 0;
 
   .wrapper {
     padding: 2em .5em;
     background: transparent radial-gradient(ellipse at 50% 50%, transparent , transparent 30%, rgba(0,0,0,.5)) no-repeat;
-    color: #ccc;
+    color: #333;
+    text-shadow: -1px -1px 1px #ddd;
     font-size: 1.2em;
     text-align: center;
   }
@@ -1047,6 +1048,10 @@ div.wpcf7-validation-errors {
   img.services {
     height: auto;
   }
+}
+
+.project .button + p {
+  margin-top: 2em;
 }
 
 
