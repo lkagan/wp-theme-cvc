@@ -128,9 +128,10 @@ input {
   li {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 1.25em;
-    background: url(images/hex-bullet-999.png)  no-repeat 0 .4em;
-    background-size: .75em;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: .1em;
+    font-style: italic;
   }
 }
 
@@ -1321,7 +1322,6 @@ div.wpcf7-validation-errors {
     .current-menu-item a, .current_page_item a, .current-menu-ancestor, a:hover {
       border-top: 1px solid #999;
       border-bottom: 1px solid #999;
-      border-radius:.25em;
     }
 
     li.menu-item-has-children>a:hover, li.page_item_has_children>a:hover {
