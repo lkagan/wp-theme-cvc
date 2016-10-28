@@ -516,7 +516,7 @@ img {
     box-shadow: 20px 20px 30px 4px rgba(0,0,0, .5);
     display: block;
     list-style: none;
-    background-color: rgba(0,0,0, .7);
+    background-color: rgba(0,0,0, .75);
     transform: scale(0);
     opacity: 0.5;
     transition: transform 1s, opacity 1s;
@@ -754,7 +754,6 @@ img {
 img.building {
   height: auto;
   box-shadow: 2px 2px 4px rgba(0,0,0, .3);
-  border-radius: .25em;
   width: 100%;
 }
 
@@ -769,7 +768,6 @@ img.building {
   position: relative;
   margin-top: 3em;
   box-shadow: 2px 2px 2px rgba(0,0,0, .3);
-  border-radius: .25em;
   box-sizing: border-box;;
 
   iframe {
@@ -977,7 +975,6 @@ img.building {
   background-color: #f9f9f9;
   border: solid 1px #ddd;
   box-shadow: 2px 2px 2px rgba(0,0,0,.1);
-  border-radius: .25em;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -1053,6 +1050,11 @@ div.wpcf7-validation-errors {
   margin-top: 2em;
 }
 
+.portfolio .projects.with-photos .project,
+.gallery .thumbnail-container,
+.portfolio .projects.no-photos ul {
+  border-radius: 0;
+}
 
 @media screen and (min-width: 350px) {
   .inner .hero {
@@ -1168,13 +1170,13 @@ div.wpcf7-validation-errors {
   }
 
   .article-wrapper .content-container {
-    background-color: rgba(0, 0, 0, .7);
-    border-radius: .25em;
+    background-color: rgba(0, 0, 0, .6);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
     color: #eee;
     padding: 2em;
     margin: 2em auto;
     max-width: 900px;
+    text-shadow: 1px 1px #000;
   }
 
   .article-container {
@@ -1382,6 +1384,7 @@ div.wpcf7-validation-errors {
 
     div {
       width: 200px;
+      height: 200px;
     }
   }
 
@@ -1434,7 +1437,6 @@ div.wpcf7-validation-errors {
     left: 1em;
     background-color: rgba(255,255,255, .6);
     padding: 1em;
-    border-radius: .25em;
     font-size: .85em;
   }
 
