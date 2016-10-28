@@ -46,7 +46,7 @@ gulp.task('scripts', function () {
 // Compress images
 gulp.task('images', function () {
     return gulp.src(imgPath + '/**/*')
-        .pipe(imagemin({optimizationLevel: 7, progressive: true, interlaced: true}))
+        .pipe(imagemin({optimizationLevel: 4, progressive: true, interlaced: true}))
         .pipe(gulp.dest('./images'))
         .pipe(livereload())
 });
