@@ -1065,9 +1065,23 @@ div.wpcf7-validation-errors {
 
 .portfolio .projects.with-photos .project,
 .gallery .thumbnail-container,
-.portfolio .projects.no-photos ul {
+.portfolio .projects.no-photos ul,
+.portfolio .projects.no-photos li,
+.portfolio .projects.with-photos .excerpt {
   border-radius: 0;
+  font-family: CenturyGothic, helvetica, arial, sans-serif;
 }
+
+.projects.no-photos .button {
+  background-color: #666;
+  color: #eee;
+}
+
+.projects.no-photos .button:hover {
+  background-color: #888;
+  color: #fff;
+}
+
 
 @media screen and (min-width: 350px) {
   .inner .hero {
