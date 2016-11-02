@@ -8,12 +8,18 @@ Text Domain: superiocity
 $card-shadow: 1px 1px 4px 1px rgba(0,0,0,.2);
 $high-shadow: 0px 0px 10px 8px rgba(0,0,0,.3);
 $font-serif: 'Century Regular', 'Times New Roman', serif;
-$font-sans: helvetica,arial,sans-serif;
+$font-sans: CenturyGothic,helvetica,arial,sans-serif;
 $font-content: $font-sans;
 $color1: #543449;
 $color1: #cccccc;
 $color2: #999;
 
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('fonts/centuryGothic.woff') format('woff'),
+  url('fonts/centuryGothic.ttf') format('truetype');
+  font-size: 18px;
+}
 
 html {
   font-size: 18px;
@@ -1134,10 +1140,6 @@ div.wpcf7-validation-errors {
     }
   }
 
-  .home .logos img {
-    width: 150px;
-  }
-
   .inner article {
     margin: 3em 5% 0;
   }
@@ -1543,7 +1545,7 @@ div.wpcf7-validation-errors {
   }
 
   .home .logos img {
-    width: 240px;
+    width: 150px;
   }
 
   .home .services .links {

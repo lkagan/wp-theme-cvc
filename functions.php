@@ -74,13 +74,11 @@ function superiocity_scripts_styles_footer() {
 	$themeUrl    = get_template_directory_uri();
 	$faVer       = '4.5.0';
 	$faUrl       = "//maxcdn.bootstrapcdn.com/font-awesome/$faVer/css/font-awesome.min.css";
-	$gFontUrl    = '//fonts.googleapis.com/css?family=Merriweather';
 	$mainJsUrl   = $themeUrl . '/js/main.min.js';
 	$mainJsPath  = get_template_directory() . '/js/main.min.js';
 	$mainJsVer   = file_exists( $mainJsPath ) ? filemtime( $mainJsPath ) : '';
 
 	wp_enqueue_style( 'fa-style', $faUrl, null, $faVer );
-	wp_enqueue_style( 'gfont', $gFontUrl );
 	wp_enqueue_script( 'superiocity-script', $mainJsUrl, null, $mainJsVer, true );
 }
 
