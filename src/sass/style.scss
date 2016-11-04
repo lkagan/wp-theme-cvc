@@ -8,12 +8,18 @@ Text Domain: superiocity
 $card-shadow: 1px 1px 4px 1px rgba(0,0,0,.2);
 $high-shadow: 0px 0px 10px 8px rgba(0,0,0,.3);
 $font-serif: 'Century Regular', 'Times New Roman', serif;
-$font-sans: helvetica,arial,sans-serif;
+$font-sans: CenturyGothic,helvetica,arial,sans-serif;
 $font-content: $font-sans;
 $color1: #543449;
 $color1: #cccccc;
 $color2: #999;
 
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('fonts/centuryGothic.woff') format('woff'),
+  url('fonts/centuryGothic.ttf') format('truetype');
+  font-size: 18px;
+}
 
 html {
   font-size: 18px;
@@ -524,8 +530,8 @@ img {
     display: block;
     list-style: none;
     background-color: rgba(0,0,0, .75);
-    transform: scale(0);
-    opacity: 0.5;
+    transform: scale(.5);
+    opacity: 0.0;
     transition: transform 1s, opacity 1s;
     position: relative;
     margin: 1.5em;
@@ -569,11 +575,13 @@ img {
 
 .plaque.animate {
   transform: scale(1);
+  opacity: 1;
 }
 
 .plaque {
   color: #000;
-  transform: scale(0);
+  transform: scale(0.5);
+  opacity: 0.0;
   transition: all 1s;
   background: #ccc url(images/plaque-bg.jpg) no-repeat;
   background-size: 100% 100%;
@@ -1059,9 +1067,23 @@ div.wpcf7-validation-errors {
 
 .portfolio .projects.with-photos .project,
 .gallery .thumbnail-container,
-.portfolio .projects.no-photos ul {
+.portfolio .projects.no-photos ul,
+.portfolio .projects.no-photos li,
+.portfolio .projects.with-photos .excerpt {
   border-radius: 0;
+  font-family: CenturyGothic, helvetica, arial, sans-serif;
 }
+
+.projects.no-photos .button {
+  background-color: #666;
+  color: #eee;
+}
+
+.projects.no-photos .button:hover {
+  background-color: #888;
+  color: #fff;
+}
+
 
 @media screen and (min-width: 350px) {
   .inner .hero {
@@ -1132,10 +1154,6 @@ div.wpcf7-validation-errors {
       margin-right: 1em;
       -webkit-column-break-inside: avoid;
     }
-  }
-
-  .home .logos img {
-    width: 150px;
   }
 
   .inner article {
@@ -1399,11 +1417,12 @@ div.wpcf7-validation-errors {
   }
 
   .home .intro .wrapper {
+    box-shadow: none;
     background-color: rgba(0,0,0, .7);
-    border-top-right-radius: 75%;
+    background: url(images/bg-angle.png) no-repeat right 30%;
+    background-size: cover;
     flex-wrap: wrap;
     border: none;
-    border-right: 1px solid #333;
     width: 50%;
     margin: 0 ;
     padding: 10em 5em 6em 2em;
@@ -1441,7 +1460,7 @@ div.wpcf7-validation-errors {
     position: absolute;
     top: 1em;
     left: 1em;
-    background-color: rgba(255,255,255, .6);
+    background-color: rgba(255,255,255, .7);
     padding: 1em;
     font-size: .85em;
   }
@@ -1543,7 +1562,7 @@ div.wpcf7-validation-errors {
   }
 
   .home .logos img {
-    width: 240px;
+    width: 150px;
   }
 
   .home .services .links {
@@ -1579,7 +1598,7 @@ div.wpcf7-validation-errors {
     font-size: 1.4em;
   }
 
-  .logo {
+  .home .logos img {
     width: 200px;
   }
 
