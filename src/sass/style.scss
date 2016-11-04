@@ -530,8 +530,8 @@ img {
     display: block;
     list-style: none;
     background-color: rgba(0,0,0, .75);
-    transform: scale(0);
-    opacity: 0.5;
+    transform: scale(.5);
+    opacity: 0.0;
     transition: transform 1s, opacity 1s;
     position: relative;
     margin: 1.5em;
@@ -575,11 +575,13 @@ img {
 
 .plaque.animate {
   transform: scale(1);
+  opacity: 1;
 }
 
 .plaque {
   color: #000;
-  transform: scale(0);
+  transform: scale(0.5);
+  opacity: 0.0;
   transition: all 1s;
   background: #ccc url(images/plaque-bg.jpg) no-repeat;
   background-size: 100% 100%;
