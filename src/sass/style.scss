@@ -1417,11 +1417,12 @@ div.wpcf7-validation-errors {
   }
 
   .home .intro .wrapper {
+    box-shadow: none;
     background-color: rgba(0,0,0, .7);
-    border-top-right-radius: 75%;
+    background: url(images/bg-angle.png) no-repeat right 30%;
+    background-size: cover;
     flex-wrap: wrap;
     border: none;
-    border-right: 1px solid #333;
     width: 50%;
     margin: 0 ;
     padding: 10em 5em 6em 2em;
