@@ -1432,11 +1432,13 @@ div.wpcf7-validation-errors {
 
   #intro-section {
     transition: all 1s;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
+    opacity: 0;
   }
 
   #intro-section.animate {
     transform: translateX(0);
+    opacity: 1;
   }
 
   .home .servicing {
