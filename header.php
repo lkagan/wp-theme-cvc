@@ -78,7 +78,8 @@
 			</div><!-- .hero-conteiner-wrapper -->
 			<div class="cta">
 				<div class="content">
-					<div class="copy">Stay on budget and streamline your project by partnering with the leader in nationwide turnkey hospitality renovations.</div>
+					<div class="copy">CVC streamlines Hotel/Resort renovation projects by offering a turn-key solution:  with services in Interior Design, FF&E Purchasing, and Construction.
+                    </div>
 					<div class="phone"><a href="tel:+1-800-940-7619"><i class="fa fa-phone"></i> (800) 940-7619</a></div>
 				</div>
 			</div>
