@@ -922,14 +922,12 @@ img.building {
   box-sizing: border-box;
   background-color: #333;
   color: #ccc;
-  display: inline-block;
-  width: 100%;
   text-align: center;
   border: solid 1px #ccc;
   position: relative;
-  top: -2.25em;
+  top: -1.25em;
   box-shadow: 2px 2px 4px rgba(0,0,0, .1);
-  padding: .25em;
+  padding: .5em 1em;
 }
 
 .headshots figcaption .name {
