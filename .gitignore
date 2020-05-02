@@ -3,3 +3,5 @@
 /images/*
 /js/main.min.js
 /js/main.min.js.map
+.idea/
+node_modules/
